@@ -31,15 +31,29 @@ test/           # Test scripts
    ```
 
 ## 🚀 Deployment
-Deploy contracts to your preferred network (e.g., Base Sepolia):
+Deploy contracts to the 0g testnet:
 ```sh
-npx hardhat run scripts/deploy.js --network baseSepolia
+npx hardhat run scripts/deploy.js --network 0g-testnet
+```
+
+## 🌐 0g Testnet Configuration
+Add the following to your `hardhat.config.js` under `networks`:
+```js
+"0g-testnet": {
+  url: "https://evmrpc-testnet.0g.ai",
+  accounts: [process.env.PRIVATE_KEY],
+  chainId: 7700,
+},
+```
+Store your private key in a `.env` file:
+```
+PRIVATE_KEY=your_private_key_here
 ```
 
 ## 💸 Deposit Example
-Deposit tokens into the vault:
+Deposit tokens into the vault on 0g testnet:
 ```sh
-npx hardhat run scripts/deposit.js --network baseSepolia
+npx hardhat run scripts/deposit.js --network 0g-testnet
 ```
 
 ## 🧪 Testing
