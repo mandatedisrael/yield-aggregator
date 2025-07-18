@@ -279,7 +279,7 @@ function App() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Coins className="w-8 h-8 text-blue-400" />
-              <h1 className="text-2xl font-bold text-white">ERC4626 Vault</h1>
+              <h1 className="text-2xl font-bold text-white">Yieldoooor</h1>
             </div>
             <span className="badge badge-success">0G Testnet</span>
             {isConnected && currentNetwork && currentNetwork.chainId !== 16601n && (
@@ -339,7 +339,7 @@ function App() {
       ) : (
         <div className="card text-center">
           <TrendingUp className="w-16 h-16 mx-auto mb-4 text-gray-600" />
-          <h2 className="text-xl font-semibold mb-2">Welcome to ERC4626 Vault</h2>
+          <h2 className="text-xl font-semibold mb-2">Welcome to Yieldoooor</h2>
           <p className="text-gray-600 mb-6">
             Connect your wallet to start earning yield on your tokens
           </p>

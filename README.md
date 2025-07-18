@@ -1,98 +1,110 @@
-# AI Yield Aggregator (ERC-4626 Vault)
+# Yieldoooor 🚀
 
-A simple, smart, and automated yield aggregator built on the ERC-4626 standard. This project leverages AI-driven strategies to maximize returns for users by automatically managing deposits in a secure vault.
+A modern DeFi yield aggregation platform built on ERC4626 vaults, providing users with seamless yield farming opportunities on the 0G Testnet.
 
-## 🚀 Features
-- **ERC-4626 Vault:** Standardized, secure, and composable vault for yield strategies.
-- **AI-Powered:** Uses AI logic (future scope) to optimize yield across DeFi protocols.
-- **Easy Integration:** Plug-and-play contracts for any ERC-20 token (e.g., USDC).
-- **Transparent:** Open-source, auditable smart contracts.
-- **Modern Frontend:** Beautiful React-based UI for easy interaction.
+## ✨ Features
 
-## 📦 Project Structure
-```
-contracts/      # Solidity smart contracts (MockERC20, YieldVault)
-scripts/        # Deployment and interaction scripts
-src/           # React frontend application
-test/          # Test scripts
-```
+- **ERC4626 Vault Integration**: Standard-compliant vault contracts for optimal yield strategies
+- **Modern React Frontend**: Clean, dark-themed UI with smooth animations
+- **Wallet Integration**: MetaMask support with automatic network detection
+- **Real-time Updates**: Live balance tracking and transaction feedback
+- **Network Management**: Built-in support for 0G Testnet with automatic switching
 
-## 🛠️ Setup
-1. **Clone the repo:**
-   ```sh
-   git clone <your-repo-url>
-   cd ERC4626\ Vault
+## 🏗️ Architecture
+
+### Smart Contracts
+- `MockToken.sol`: ERC20 token implementation for testing
+- `Vault.sol`: ERC4626-compliant vault with deposit/withdraw functionality
+
+### Frontend
+- **React 18** with **Vite** for fast development
+- **Ethers.js v6** for blockchain interaction
+- **Lucide React** for beautiful icons
+- **Custom notification system** with elegant animations
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- MetaMask wallet
+- 0G Testnet configured in MetaMask
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd yieldoooor
    ```
-2. **Install dependencies:**
-   ```sh
+
+2. **Install dependencies**
+   ```bash
    npm install
    ```
-3. **Compile contracts:**
-   ```sh
-   npx hardhat compile
+
+3. **Deploy contracts** (if needed)
+   ```bash
+   npx hardhat run scripts/deploy.js --network 0g-testnet
    ```
 
-## 🚀 Deployment
-Deploy contracts to the 0g testnet:
-```sh
-npx hardhat run scripts/deploy.js --network 0g-testnet
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+## 🔧 Configuration
+
+### Network Setup
+The application is configured for **0G Testnet** (Chain ID: 16601). The frontend will automatically prompt users to switch networks if needed.
+
+### Contract Addresses
+Update `src/config.js` with your deployed contract addresses:
+
+```javascript
+export const CONTRACT_ADDRESSES = {
+  mockUSDC: "0x...",
+  usdcVault: "0x...",
+  mockDAI: "0x...",
+  daiVault: "0x..."
+}
 ```
 
-## 🌐 0G Testnet Configuration
-Add the following to your `hardhat.config.js` under `networks`:
-```js
-"0g-testnet": {
-  url: "https://evmrpc-testnet.0g.ai",
-  accounts: [process.env.PRIVATE_KEY],
-  chainId: 16601,
-},
-```
-Store your private key in a `.env` file:
-```
-PRIVATE_KEY=your_private_key_here
-```
+## 💡 Usage
 
-## 💸 Deposit Example
-Deposit tokens into the vault on 0g testnet:
-```sh
-npx hardhat run scripts/deposit.js --network 0g-testnet
-```
+1. **Connect Wallet**: Click "Connect Wallet" and approve MetaMask connection
+2. **Switch Network**: If prompted, switch to 0G Testnet
+3. **Deposit Tokens**: Enter amount and click "Deposit" to earn yield
+4. **Withdraw**: Click "Withdraw" to redeem your tokens and earned yield
+5. **Track Performance**: Monitor your vault shares and token balances in real-time
 
-## 🎨 Frontend Development
-Start the development server:
-```sh
-npm run dev
-```
+## 🎨 UI Features
 
-The frontend will be available at `http://localhost:3000`
+- **Dark Theme**: Modern, eye-friendly interface
+- **Smooth Animations**: Elegant transitions and loading states
+- **Real-time Feedback**: Custom notifications for all user actions
+- **Responsive Design**: Works seamlessly on desktop and mobile
 
-### Frontend Features:
-- **Wallet Connection:** Connect MetaMask or other Web3 wallets
-- **Token Balances:** View your token and vault share balances
-- **Deposit/Withdraw:** Easy deposit and withdrawal interface
-- **Transaction Preview:** See exactly what you'll receive before confirming
-- **Real-time Updates:** Balances update automatically after transactions
-- **Mobile Responsive:** Works on desktop and mobile devices
+## 🔒 Security
 
-### Network Setup:
-Make sure your wallet is connected to the 0G testnet:
-- **Chain ID:** 16601
-- **RPC URL:** https://evmrpc-testnet.0g.ai
-- **Block Explorer:** https://testnet.0g.ai
+- **ERC4626 Standard**: Implements industry-standard vault interface
+- **SafeERC20**: Protected token transfers and approvals
+- **Input Validation**: Comprehensive error handling and user feedback
 
-## 🧪 Testing
-Run tests with:
-```sh
-npx hardhat test
-```
+## 📝 License
 
-## 📖 Learn More
-- [ERC-4626 Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [Hardhat Documentation](https://hardhat.org/)
-- [React Documentation](https://reactjs.org/)
+This project is licensed under the MIT License.
 
 ## 🤝 Contributing
-Pull requests and issues are welcome!
 
-## 📬 Contact
-For questions or support, open an issue or contact the maintainer.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+---
+
+**Built with ❤️ for the DeFi community**
